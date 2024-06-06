@@ -7,16 +7,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
+import { PrincipalComponent } from './principal/principal.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule, MatDividerModule, MatButtonModule
+    MatIconModule, MatDividerModule, MatButtonModule,
+    PrincipalComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
