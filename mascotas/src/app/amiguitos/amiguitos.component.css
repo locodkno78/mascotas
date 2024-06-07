@@ -1,0 +1,22 @@
+/* amiguitos.component.css */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+  }
+  
+  .card {
+    width: 400px;
+    display: flex;
+    flex-direction: column; /* Asegura que los contenidos de la tarjeta se alineen verticalmente */
+    background-size: cover;
+  }
+
+  .btn {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  
