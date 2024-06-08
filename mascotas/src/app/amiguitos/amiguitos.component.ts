@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
-import { amiguitosList } from './amiguitos.mock';
+import { Component, OnInit } from '@angular/core';
+import { amiguitos, amiguitosList } from './amiguitos.mock';
 
 @Component({
   selector: 'app-amiguitos',
   templateUrl: './amiguitos.component.html',
   styleUrls: ['./amiguitos.component.css'],  
 })
-export class AmiguitosComponent {
-  amiguitosList = amiguitosList
+export class AmiguitosComponent implements OnInit {
+  amiguitosList: amiguitos[] = amiguitosList
+
+  constructor() {}
+
+  ngOnInit(): void{
+
+  }
 }
