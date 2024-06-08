@@ -15,7 +15,13 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { PrincipalComponent } from './principal/principal.component';
 
 @NgModule({
-  declarations: [AppComponent, ToolbarComponent, ContactoComponent, PrincipalComponent, AmiguitosComponent,],
+  declarations: [
+    AppComponent,
+    ToolbarComponent,
+    ContactoComponent,
+    PrincipalComponent,
+    AmiguitosComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,7 +32,6 @@ import { PrincipalComponent } from './principal/principal.component';
     MatCardModule,
     MatToolbarModule,
     MatMenuModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent],
