@@ -1,0 +1,22 @@
+<div class="card-container">
+    <div *ngFor="let amiguito of amiguitosList">
+      <mat-card class="card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title><h1><strong>{{ amiguito.name }}</strong></h1></mat-card-title>
+          <mat-card-subtitle><h3>ID: {{ amiguito.id }}</h3></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="amiguito.imagen" alt="{{ amiguito.name }}" />
+        <mat-card-content>
+          <h2>EDAD: {{ amiguito.edad }}</h2>
+          <h2>RAZA: {{ amiguito.raza }}</h2>
+          <h2>DESCRIPCION: {{ amiguito.description }}</h2>
+        </mat-card-content>
+        <mat-card-actions>
+        <button  mat-fab extended color="primary">
+          <mat-icon>favorite</mat-icon>
+          Adoptame
+        </button>
+      </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
