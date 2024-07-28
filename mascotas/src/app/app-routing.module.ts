@@ -13,7 +13,7 @@ const routes: Routes = [
       import('./amiguitos/amiguitos.module').then((m) => m.AmiguitosModule),
   },
   { path: '404', component: Error404PageComponent },
-  { path: '', redirectTo: 'mascotas', pathMatch: 'full' },
+  { path: '', redirectTo: 'amiguitos', pathMatch: 'full' },
   {
     path: '**',
     redirectTo: '404',
