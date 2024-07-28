@@ -1,24 +1,67 @@
 <mat-sidenav-container fullscreen>
-    <mat-sidenav #sidenav mode="push" [ngStyle]="{ witdh: '250px' }">
-      <mat-toolbar color="primary">
-        <span>Menu</span>
-        <span class="spacer"></span>
-        <button mat-icon-button (click)="sidenav.toggle()">
-          <mat-icon>pets</mat-icon>
-        </button>
-      </mat-toolbar>
-    </mat-sidenav>
-  
+  <mat-sidenav #sidenav mode="push" [ngStyle]="{ witdh: '250px' }">
     <mat-toolbar color="primary">
-      <button mat-icon-button (click)="sidenav.toggle()">
-        <mat-icon>pets</mat-icon>
-      </button>
-  
+      <span>Menu</span>
       <span class="spacer"></span>
-      <button mat-button>Salir</button>
     </mat-toolbar>
-  
-    <div class="container">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-container>
+    <mat-list>
+      <div class="links">
+        <mat-list-item
+          ><a
+            mat-button
+            routerLink="/"
+            [ngClass]="{ active: menuOption == '/' }"
+            (click)="onOption('/')"
+            ><mat-icon>home</mat-icon>Home</a
+          ></mat-list-item
+        >
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <a
+            mat-button
+            routerLink="nuevo-animal"
+            [ngClass]="{ active: menuOption == 'nuevo-animal' }"
+            (click)="onOption('nuevo-animal')"
+            ><mat-icon>pets</mat-icon>Nuevo Animal</a
+          >
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <a
+            mat-button
+            routerLink="buscar"
+            [ngClass]="{ active: menuOption == 'buscar' }"
+            (click)="onOption('buscar')"
+            ><mat-icon>search</mat-icon>Buscar</a
+          >
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <a
+            mat-button
+            routerLink="contacto"
+            [ngClass]="{ active: menuOption == 'contacto' }"
+            (click)="onOption('contacto')"
+            ><mat-icon>email</mat-icon>contacto</a
+          >
+        </mat-list-item>
+      </div>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>pets</mat-icon>
+    </button>
+
+    <span class="spacer"></span>
+    <button mat-button routerLink="/"
+    [ngClass]="{ active: menuOption == '/' }"
+    (click)="onOption('/')">Salir</button>
+  </mat-toolbar>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>
