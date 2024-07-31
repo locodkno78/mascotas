@@ -29,7 +29,7 @@ const routes: Routes = [
         component: ListPageComponent,
       },
       {
-        path: 'id',
+        path: 'amiguito/:id',
         component: AmiguitosPageComponent,
       },
       {
