@@ -7,6 +7,7 @@ import { NewPageComponent } from './pages/new-page/new-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { MaterialModule } from '../material/material.module';
 import { AmiguitosPageComponent } from './pages/amiguitos-page/amiguitos-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,6 @@ import { AmiguitosPageComponent } from './pages/amiguitos-page/amiguitos-page.co
     SearchPageComponent,
     AmiguitosPageComponent,
   ],
-  imports: [CommonModule, AmiguitosRoutingModule, MaterialModule],
+  imports: [CommonModule, AmiguitosRoutingModule, MaterialModule, ReactiveFormsModule],
 })
 export class AmiguitosModule {}

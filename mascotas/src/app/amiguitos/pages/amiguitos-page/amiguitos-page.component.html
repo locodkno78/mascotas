@@ -1,3 +1,98 @@
-<h1>Acá se verá cada animal con un formulario para adoptar
-    
-</h1>
+<h1>ACÁ VENDRÁ TODA LA INFO DEL ANIMAL SELECCIONADO</h1>
+<div class="container">
+  <h1>FORMULARIO DE ADOPCION</h1>
+  <form class="example-form">
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>NOMBRE</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>APELLIDO</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <p>
+        <mat-form-field class="example-full-width">
+          <mat-label>DOMICILIO</mat-label>
+          <textarea matInput></textarea>
+        </mat-form-field>
+      </p>
+
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>CIUDAD</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>PROVINCIA</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>CODIGO POSTAL</mat-label>
+            <input matInput #postalCode maxlength="5" />
+            <mat-hint align="end">{{ postalCode.value.length }} / 5</mat-hint>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>PAIS</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>TELEFONO</mat-label>
+            <input type="tel" matInput />
+            <mat-icon matSuffix>phone</mat-icon>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input
+              type="email"
+              matInput
+              [formControl]="emailFormControl"
+              [errorStateMatcher]="matcher"              
+            />            
+            <mat-error
+              *ngIf="
+                emailFormControl.hasError('email') &&
+                !emailFormControl.hasError('required')
+              "
+            >
+              Por favor, ingrese un email valido
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email es <strong>obligatorio</strong>
+            </mat-error>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
