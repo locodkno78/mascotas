@@ -1,3 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    flex-direction: column; /* Asegura que los elementos dentro del contenedor se apilen verticalmente */
+    padding: 20px; /* Añade algo de relleno */
+    box-sizing: border-box;
+  }
+  
 h1{
     color: black;
 }
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+.example-full-width {
+    width: 100%;
+}
+  
+td {
+    padding-right: 8px;
+}
+  
+  

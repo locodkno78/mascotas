@@ -1,5 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
+
+/** Error when invalid control is dirty, touched, or submitted. */
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
 
 @Component({
   selector: 'app-amiguitos-page',
@@ -7,20 +16,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./amiguitos-page.component.css']
 })
 export class AmiguitosPageComponent implements OnInit {
-  amiguitoId?: number;
-
-  constructor(private route: ActivatedRoute) {}
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  matcher = new MyErrorStateMatcher();
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      const id = params.get('id');
-      if (id !== null) {
-        this.amiguitoId = +id;  // Solo asigna si no es null
-        console.log('ID:', this.amiguitoId);
-      } else {
-        // Maneja el caso donde el ID es null
-        console.error('El ID es null');
-      }
-    });
+    
   }
 }
