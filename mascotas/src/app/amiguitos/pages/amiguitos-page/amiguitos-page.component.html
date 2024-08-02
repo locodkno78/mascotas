@@ -1,5 +1,24 @@
-<h1>ACÁ VENDRÁ TODA LA INFO DEL ANIMAL SELECCIONADO</h1>
 <div class="container">
+<div>
+  <mat-card class="card-id" appearance="outlined" *ngIf="amiguito">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title class="header-id">{{ amiguito.name }}</mat-card-title>
+        <mat-card-subtitle class="header-id">RAZA: {{ amiguito.raza }}</mat-card-subtitle>
+        <mat-card-subtitle class="header-id">EDAD: {{ amiguito.edad }}</mat-card-subtitle>
+        <mat-card-subtitle class="header-id">ID: {{ amiguito.id }}</mat-card-subtitle>
+        <img
+          mat-card-xl-image
+          [src]="amiguito.imagen"
+        />
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>      
+      {{amiguito.fullDescription}}
+    </mat-card-content>
+  </mat-card>
+</div>
+
   <h1>FORMULARIO DE ADOPCION</h1>
   <form class="example-form">
     <table class="example-full-width" cellspacing="0">
@@ -77,8 +96,8 @@
               type="email"
               matInput
               [formControl]="emailFormControl"
-              [errorStateMatcher]="matcher"              
-            />            
+              [errorStateMatcher]="matcher"
+            />
             <mat-error
               *ngIf="
                 emailFormControl.hasError('email') &&
@@ -95,4 +114,11 @@
       </tr>
     </table>
   </form>
+  <button
+          class="btn"
+          mat-flat-button          
+          >
+          <mat-icon class="icon">description</mat-icon>
+          ENVIAR SOLICITUD
+        </button>
 </div>
