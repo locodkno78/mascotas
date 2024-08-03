@@ -56,9 +56,14 @@
     </button>
 
     <span class="spacer"></span>
-    <button mat-button routerLink="/"
-    [ngClass]="{ active: menuOption == '/' }"
-    (click)="onOption('/')">Salir</button>
+    <button
+      mat-button
+      routerLink="/"
+      [ngClass]="{ active: menuOption == '/' }"
+      (click)="onOption('/')"
+    >
+      Salir
+    </button>
   </mat-toolbar>
 
   <div class="container">

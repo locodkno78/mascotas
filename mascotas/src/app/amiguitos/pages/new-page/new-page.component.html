@@ -1,1 +1,31 @@
-<p>NUEVO ANIMAL!</p>
+<div class="container">
+  <h1>CARGAR UN NUEVO ANIMAL</h1>
+
+  <mat-form-field>
+    <mat-label>Nombre del Animal</mat-label>
+    <input matInput />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Raza del Animal</mat-label>
+    <input matInput />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Tipo de Animal</mat-label>
+    <mat-select>
+      <mat-option value="one">Perro</mat-option>
+      <mat-option value="two">Gato</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Edad del Animal</mat-label>
+    <input matInput />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Descripción</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+  <button class="btn" matTooltip="Agregar a la base de datos" mat-flat-button>
+    <mat-icon class="icon">description</mat-icon>
+    CARGAR
+  </button>
+</div>
