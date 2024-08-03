@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center; /* Centrar verticalmente */
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+  flex-direction: column; /* Asegura que los elementos dentro del contenedor se apilen verticalmente */
+  padding: 5px; /* Añade algo de relleno */
+  box-sizing: border-box;
+}
+
+h1 {
+  color: black;
+}
+
+.btn {
+  background-color: rgba(40, 7, 157, 0.701);
+  color: white;
+}

@@ -8,6 +8,7 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { MaterialModule } from '../material/material.module';
 import { AmiguitosPageComponent } from './pages/amiguitos-page/amiguitos-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     NewPageComponent,
     SearchPageComponent,
     AmiguitosPageComponent,
+    NewPageComponent,
   ],
-  imports: [CommonModule, AmiguitosRoutingModule, MaterialModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    AmiguitosRoutingModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    MatTooltipModule,
+  ],
 })
 export class AmiguitosModule {}
