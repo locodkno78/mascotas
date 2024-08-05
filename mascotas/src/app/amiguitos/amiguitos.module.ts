@@ -9,6 +9,9 @@ import { MaterialModule } from '../material/material.module';
 import { AmiguitosPageComponent } from './pages/amiguitos-page/amiguitos-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MaterialModule,
     ReactiveFormsModule,
     MatTooltipModule,
+    MatFormFieldModule, MatInputModule, MatTableModule,
   ],
 })
 export class AmiguitosModule {}
