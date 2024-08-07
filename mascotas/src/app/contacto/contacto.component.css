@@ -1,3 +1,33 @@
-h1{
-    color: black;
+.container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+  flex-direction: column; /* Asegura que los elementos dentro del contenedor se apilen verticalmente */
+  padding: 20px; /* Añade algo de relleno */
+  box-sizing: border-box;
 }
+.card {
+  max-width: 400px;
+  text-align: center;
+}
+.title {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 24px;
+}
+.example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 8px;
+    background-color: rgb(81, 11, 245);
+    color: white;    
+  }
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
