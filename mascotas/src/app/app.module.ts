@@ -6,6 +6,9 @@ import { SharedModule } from './shared/shared.module';
 import { Error404PageComponent } from './shared/error404-page/error404-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactoComponent } from './contacto/contacto.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ContactoComponent } from './contacto/contacto.component';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    BrowserAnimationsModule,   
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule   
   ],
   providers: [],
   bootstrap: [AppComponent],
